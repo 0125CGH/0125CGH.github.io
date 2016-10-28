@@ -1,0 +1,273 @@
+/*@import url(http://weloveiconfonts.com/api/?family=brandico|zocial);
+
+[class*="brandico-"]:before {
+font-family: 'brandico', sans-serif;
+}
+  [class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}*/
+
+head{
+
+}
+body{
+  /*background:url("../images/background.png");*/
+  background-size: cover;
+  background-position:top center;
+  margin:0;
+  padding:0;
+  font-family: Helvetica, Arial, sans-serif;
+  padding-top:1em;
+}
+
+@keyframes blink {
+  0% { background-color: #00ee00; }
+  50% { background-color: #00ee00; }
+  51% { background-color: black; }
+  100% { background-color: black; }
+}
+
+@-webkit-keyframes blink {
+  0% { background-color: #00ee00; }
+  50% { background-color: #00ee00; }
+  51% { background-color: black; }
+  100% { background-color: black; }
+}
+
+@-moz-keyframes blink{
+  0% { background-color: #00ee00; }
+  50% { background-color: #00ee00; }
+  51% { background-color: black; }
+  100% { background-color: black; }
+}
+
+@-ms-keyframes blink{
+  0% { background-color: #00ee00; }
+  50% { background-color: #00ee00; }
+  51% { background-color: black; }
+  100% { background-color: black; }
+}
+
+@-o-keyframes blink{
+  0% { background-color: #00ee00; }
+  50% { background-color: #00ee00; }
+  51% { background-color: black; }
+  100% { background-color: black; }
+}
+
+
+
+#navbar{
+  width:100%;	/*make it fit screen*/
+  position:fixed;	/*fix navbar to screen*/
+  top:0;
+  z-index:1;	/*top priority*/
+  background-color:white;
+  /*border-radius:2em;*/
+  border-bottom:1px gray solid;
+  height:auto;
+}
+
+/*center items*/
+#navbaritems{
+  margin:0 auto;
+  padding:0;
+  text-align:center;
+}
+
+#navbaritems li{
+  display:inline-block;	/*buttons and text don't overlap*/
+  list-style-type:none;
+}
+
+/* don't display drop down menu */
+#navbaritems > li > ul{
+  display:none;
+  position:absolute;
+}
+
+/* border around drop down menu, display them underneath the hover button */
+#navbaritems > li:hover > ul{
+  border:solid gray 1px;
+  padding-left:0;
+  display:block;
+  background-color:white;
+}
+
+/* line separator, display drop down menu vertically */
+#navbar ul li ul li{
+  border-bottom:solid gray 1px;
+  display:block;
+}
+
+/* make links gray */
+#navbaritems a {
+  color: #767676;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 9px 18px 9px;
+  text-decoration: none;
+}
+
+/* make background gray and links white when hovered */
+#navbaritems a:hover {
+  background-color: #767676;
+  color: #ffffff;
+}
+
+/* put under nav bar when first visiting page, wrap page width wise, terminal neon green for text, align text middle*/
+#home{
+  position:relative;
+  font-size:3em;
+  width:100%;
+  height:600px;
+  background-color:black;
+  color:#00ee00;
+  vertical-align:middle;
+}
+
+/* container in order to achieve vertically centered text */
+#home div{
+  width:100%;
+  text-align:center;
+  top:50%;
+  position:absolute;
+  margin-top:-1.5em;
+}
+
+/* animations for blinking cursor */
+#cursor{
+  background-color:black;
+  -animation-name:blink;
+  -animation-iteration-count:infinite;
+  -animation-duration:1s;
+
+  background-color:black;
+  -webkit-animation-name:blink;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-duration:1s;
+
+  background-color:black;
+  -ms-animation-name:blink;
+  -ms-animation-iteration-count:infinite;
+  -ms-animation-duration:1s;
+
+  background-color:black;
+  -moz-animation-name:blink;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-duration:1s;
+
+  background-color:black;
+  -o-animation-name:blink;
+  -o-animation-iteration-count:infinite;
+  -o-animation-duration:1s;
+}
+
+/* auto align text centered */
+.section{
+  text-align:center;
+  padding-bottom:3em;
+  border-top:gray solid .25em;
+}
+
+/* align paragraphs left */
+.section p{
+  text-align:left;
+  margin:0 1em 0 1em;
+  font-size:2em;
+  color:gray;
+}
+
+/* first paragraph align center */
+.section .firstpara{
+  text-align:center;
+}
+
+/* make links different color and bold */
+.section a{
+  color:gray;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+/* links blue when hovered */
+.section a:hover{
+  color:blue;
+}
+
+.section h1{
+  font-size:3em;
+  font-weight:bold;
+  color:black;
+}
+
+/* make left smaller headers */
+.section h2{
+  font-size:2em;
+  margin:0 1em 0 1em;
+  text-align:left;
+  margin-bottom:1em;
+}
+
+/* make headers that are links black */
+.section  h2 a{
+  color:black;
+  text-weight:none;
+}
+
+/* so navbar doesn't hide content when a link is clicked */
+.section:before{
+  display: block;
+  content: "";
+  height: 3em;	/* 3 em gap above the content when link is clicked*/
+  margin: -1em 0 0;
+}
+
+/* sets standard image size and shape */
+.section img{
+  max-width:10em;
+  max-height:20em;
+  border-radius:15%;
+}
+
+/* styling for lists */
+.section ul{
+  font-size:2em;
+  color:gray;
+  list-style:none;
+  margin: 1em 0;
+  padding: 0 1.5em;
+  text-align:left;
+}
+
+/* makes triangular bullets */
+.section ul li:before {
+  content: "";
+  border-color: transparent black;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 1em;
+  position: relative;
+}
+
+.section a:hover img{
+
+  color: rgba(84, 250, 95, 0.5);
+  text-shadow: 3px 0px 3px rgba(94, 128, 255, 1);
+}
+
+/* footer styling */
+#footer{
+  padding-top:.5em;
+  padding-bottom:.5em;
+  text-align:center;
+  background-color:black;
+  color:white;
+  width:100%
+  clear:both;
+}

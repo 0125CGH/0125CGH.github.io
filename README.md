@@ -19,3 +19,4 @@ deleted some unneeded big files, mostly images
 - add some more javascript elements
 - add menu to navbar when mobile (i.e., website width is a certain width)
 - create a 404 page# 0125CGH.github.io
+# 0125CGH.github.io
