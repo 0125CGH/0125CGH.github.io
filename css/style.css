@@ -164,6 +164,7 @@ body{
   -o-animation-duration:1s;
 }
 
+
 /* auto align text centered */
 .section{
   text-align:center;
@@ -226,9 +227,9 @@ body{
 
 /* sets standard image size and shape */
 .section img{
-  max-width:10em;
-  max-height:20em;
-  border-radius:15%;
+  max-width:30em;
+  max-height:30em;
+  border-radius:5%;
 }
 
 /* styling for lists */
