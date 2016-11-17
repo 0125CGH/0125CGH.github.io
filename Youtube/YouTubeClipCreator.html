@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- 
+	Jean Sung 
+	Spring 2015
+	Youtube Clip Generator For Start and End Times  
+	Originally source: 
+	http://www.techtipsforall.com/youtube-help/embed-part-of-youtube-video-from-specific-start-time-to-end-time/ 
+	-->
+	<script>
+function youtubeCode()
+{
+//Getting the ID from url
+var url=(document.getElementById('v1').value);	
+videoidField = url.replace(/^[^v]+v.(.{11}).*/,"$1");
+var autoplayField=document.getElementById('autoplay');
+var autoplayFieldValue=autoplayField.options[autoplayField.selectedIndex].value;
+// Using unary operator +num1 to covert to number before adding 
+var startField=(+(document.getElementById('startMin').value * 60)) + (+document.getElementById('startSecond').value);
+var stopField=(+(document.getElementById('stopMin').value * 60)) + (+document.getElementById('stopSecond').value);
+var WTF=document.getElementById('wheretoembed');
+var WTFF=WTF.options[WTF.selectedIndex].value;
+// Validation
+if(url == 0 || stopField.value == 0)
+{
+	alert("Please fill Video Url");
+	return false;
+}
+// Embed option 
+if(WTFF != 1)
+	document.getElementById("result").innerHTML = 'http://www.youtube.com/v/'+videoidField+'?version=3&start='+startField
+		+'&end='+stopField+'&autoplay='+autoplayFieldValue+'&amp;hl=en_US&amp;rel=0';
+else
+	document.getElementById("result").innerHTML = '&#60;iframe width="640" height="360" src="http://www.youtube.com/embed/'+videoidField+'?rel=0&start='+startField+'&end='+stopField+'&autoplay='+autoplayFieldValue+'" frameborder="0" allowfullscreen&#62;&#60;/iframe&#62;';
+}
+</script>
+
+</head>
+<body style="background:#66CCFF">
+	<FORM NAME="frmone" ACTION="" METHOD="POST">
+		<P> Create a YouTube Clip  URL with Start/End Time </P>
+		<P> Where do you want to embed part of Youtube video?
+			<SELECT id = "wheretoembed">
+				<OPTION VALUE="1">Website or Blog</OPTION>
+				<OPTION VALUE="2">PowerPoint</OPTION>
+				<OPTION VALUE="3">Just the link</OPTION>
+			</Select>
+		</P>
+
+		<P>Paste Youtube Video URL here  
+			<INPUT TYPE="TEXT" id="v1" VALUE=""></P>
+
+				<P> Start min:
+				<INPUT TYPE="TEXT"  id="startMin" VALUE="">
+				Start seconds:
+				<INPUT TYPE="TEXT"  id="startSecond" VALUE=""></P>	
+
+				<P> Stop min:
+				<INPUT TYPE="TEXT"  id="stopMin" VALUE="">
+				Stop seconds:
+				<INPUT TYPE="TEXT"  id="stopSecond" VALUE=""></P>	
+
+
+			<P>Do you want the video to start playing automatically?
+				<SELECT id = "autoplay">
+					<OPTION value = "0">No</OPTION>
+					<OPTION value = "1">Yes</OPTION>
+				</Select>
+				<input type="button" value="Get the Code!" onclick="youtubeCode();" >
+
+						</FORM>
+						<P> Result: </P>
+						<p id="result">  </p>
+	</body>
+</html> 
