@@ -4,13 +4,13 @@ function whoIsIt(){
 		alert("Hello Christian!");
 	}
 	else if (person == "Ashley" || "ashely"){
-		alert("You're a loser!")
+		alert("You are not Christian! You must not be cool.")
 	}
 	else if (person == "Amy" || "amy"){
-	alert("You're a loser!")
+		alert("You are not Christian! You must not be cool.")
 	}
 	else if (person == "Lindha" || "lindha" || "lindha"){
-	alert("You're a loser!")
+		alert("You are not Christian! You must not be cool.")
 	}
 	else {
 		alert("You are not Christian! You must not be cool." );
