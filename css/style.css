@@ -205,7 +205,7 @@ body{
 
 /* make left smaller headers */
 .section h2{
-  font-size:1em;
+  font-size:2em;
   margin:0 1em 0 1em;
   text-align:left;
   margin-bottom:1em;
