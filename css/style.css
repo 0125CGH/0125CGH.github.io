@@ -206,7 +206,7 @@ body{
 /* make left smaller headers */
 .section h2{
   font-size:2em;
-  margin:0 1em 0 1em;
+  margin:0 0em 0 0em;
   text-align:left;
   margin-bottom:1em;
 }
@@ -228,8 +228,8 @@ body{
 
 /* sets standard image size and shape */
 .section img{
-  max-width:30em;
-  max-height:30em;
+  max-width:18em;
+  max-height:18em;
   border-radius:5%;
 }
 
