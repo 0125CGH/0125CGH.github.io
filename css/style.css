@@ -185,6 +185,7 @@ body{
   text-align:center;
 }
 
+
 /* make links different color and bold */
 .section a{
   color:gray;
@@ -194,7 +195,7 @@ body{
 
 /* links blue when hovered */
 .section a:hover{
-  color:blue;
+  color:red;
 }
 
 .section h1{
