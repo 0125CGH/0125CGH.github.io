@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 function whoIsIt(){
 	var person = prompt("Please enter your name here");
 	if (person == "Christian" || person =="christian"){
@@ -16,3 +19,21 @@ function whoIsIt(){
 		alert("You are not Christian!" );
 	}
 }
+
+
+
+function makeUl(){
+	var liArray = [
+	<li>item 1</li>,
+	<li>item 2<li>, 
+	<li>item 3</li>
+	];
+	<ul>{liArray}</ul>;
+
+}
+
+ReactDOM.render(
+  <ul>{peopleLIs}</ul>,
+  document.getElementById('app')
+);
+
