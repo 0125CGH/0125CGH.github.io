@@ -200,23 +200,21 @@
 
       </ul>        
       <?php
- <!--        //Sample Database Connection Syntax for PHP and MySQL.
+      
+ <!--   //Sample Database Connection Syntax for PHP and MySQL.
 
         //Connect To Database -->
-        $test = "test";
-        echo $test;
-
         $hostname="localhost";
         $username="root";
         $password="0125CGH";
-        $dbname="your_dbusername";
-        $usertable="your_tablename";
-        $yourfield = "your_field";
+        $dbname="pets";
+        $usertable="cats";
+        $yourfield = "name";
 
         mysql_connect($hostname,$username, $password) or die ("<html><script language='JavaScript'>alert('Unable to connect to database! Please try again later.'),history.go(-1)</script></html>");
         mysql_select_db($dbname);
 
-<!--         # Check If Record Exists -->
+<!--     # Check If Record Exists -->
 
         $query = "SELECT * FROM $usertable";
 
